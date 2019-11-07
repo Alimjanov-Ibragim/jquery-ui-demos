@@ -1,0 +1,47 @@
+body {
+    height: 100vh;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main {
+    position: relative;
+    margin: 100px auto;
+    padding: 5px;
+    width: 660px;
+    height: 360px;
+    background-color: silver;
+    border: 5px solid grey;
+    border-radius: 15px;
+}
+
+#scr {
+    margin: 20px auto;
+    width: 600px;
+    height: 320px;
+    margin-top: 20px;
+    background-color: #fff;
+    background-size: cover;
+    border: 2px solid #000;
+    border-radius: 10px;
+}
+
+button {
+    position: absolute;
+    top: 150px;
+    width: 25px;
+    height: 70px;
+    font: 12pt arial,tahoma,sans-serif;
+    text-align: center;
+    cursor: pointer;
+}
+
+.left {
+    left: 5px;
+}
+
+.right {
+    right: 5px;
+}
