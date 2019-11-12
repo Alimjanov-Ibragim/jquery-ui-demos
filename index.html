@@ -1,18 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Easy slider</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
     <link rel="stylesheet" href="css/reboot.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
 </head>
 <body>
-   
-    <div id="main">
-        <button class="left" onclick="slider.left();"><</button>
-        <div id="scr"></div>
-        <button class="right" onclick="slider.right();">></button>
+
+    <!-- Дата -->
+    <p>
+        Date:
+        <input id="date" type="text">
+    </p>
+
+    <!-- Диалоговое окно -->
+    <div id="dialog" title="Привет!">
+        <p>Только сегодня! Успей купить гироскутер всего за 300$ и получи в подарок шлем!</p>
     </div>
 
+    <br />
+    <br />
+
+    <!-- Аккордион -->
+    <div id="accordion">
+        <h3><a href="#">Описание</a></h3>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores alias quasi a, beatae ipsum incidunt dolores earum voluptatem dolor, blanditiis eaque ullam doloribus dolore repellendus quam? Unde quasi dolor labore?</p>
+        </div>
+        <h3><a href="#">Описание 2</a></h3>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores alias quasi a, beatae ipsum incidunt dolores earum voluptatem dolor, blanditiis eaque ullam doloribus dolore repellendus quam? Unde quasi dolor labore?</p>
+        </div>
+        <h3><a href="#">Описание 3</a></h3>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores alias quasi a, beatae ipsum incidunt dolores earum voluptatem dolor, blanditiis eaque ullam doloribus dolore repellendus quam? Unde quasi dolor labore?</p>
+        </div>
+    </div>
+
+    <br />
+    <br />
+
+    <!-- Прогрессбар -->
+    <div id="bar"></div>
+    <button id="progress">Добавить 10</button>
+    <div id="result"></div>
+    <div id="percent"></div>
+
+    <br />
+    <br />
+
+    <!-- Табы -->
+    <div id="tabs">
+        <ul>
+            <li><a href="#tabs-1">Описание</a></li>
+            <li><a href="#tabs-2">Характеристики</a></li>
+            <li><a href="#tabs-3">Цена</a></li>
+        </ul>
+        <div id="tabs-1">
+            <p>Содержимое 1-й вкладки</p>
+        </div>
+        <div id="tabs-2">
+            <p>Содержимое 2-й вкладки</p>
+        </div>
+        <div id="tabs-3">
+            <p>Содержимое 3-й вкладки</p>
+        </div>
+    </div>
+
+    <br />
+    <br />
+
+    <!-- Кнопки -->
+    <div>
+        <button id="button1">Кнопка 1</button>
+        <button id="button2">Кнопка 2</button>
+        <button id="button3">Кнопка 3</button>
+    </div>
+   
+<script type="text/javascript" src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+<script type="text/javascript" src="jquery-ui-1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jquery-ru.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

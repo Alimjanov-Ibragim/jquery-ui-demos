@@ -1,27 +1,47 @@
-var slider = {
-  slides: ["img/1.jpg", "img/2.jpg", "img/3.jpg"],
-  frame: 0,
-  set: function(image) {
-    document.getElementById("scr").style.backgroundImage = "url(" + image + ")";
-  },
-  init: function() {
-    this.set(this.slides[this.frame]);
-  },
-  left: function() {
-    this.frame--;
-    if (this.frame < 0) this.frame = this.slides.length - 1;
-    this.set(this.slides[this.frame]);
-  },
-  right: function() {
-    this.frame++;
-    if (this.frame == this.slides.length) this.frame = 0;
-    this.set(this.slides[this.frame]);
-  }
-};
+// Дата
+$(function() {
+  $.datepicker.setDefaults($.extend($.datepicker.regional["ru"]));
+  $("#date").datepicker();
+});
 
-window.onload = function() {
-  slider.init();
-  setInterval(function() {
-    slider.right();
-  }, 5000);
-};
+// Диалоговое окно
+$("#dialog").dialog();
+
+// Аккордион
+$("#accordion").accordion();
+
+// Прогрессбар
+$("#bar").progressbar({
+  value: 0,
+  change: function(event, ui) {
+    //alert('Event ' + event.type);
+  },
+  complete: function(event, ui) {
+    alert("Event " + event.type);
+  }
+});
+$("button#progress").click(function() {
+  var currentVal = $("#bar").progressbar("option", "value");
+
+  if (currentVal < 100) {
+    currentVal = currentVal + 10;
+    $("#percent").text(currentVal + "%");
+    $("#bar").progressbar("option", "value", currentVal);
+  }
+});
+
+// Табы
+$("#tabs").tabs();
+
+// Кнопки
+$("#button1")
+  .button()
+  .click(function(e) {
+    alert("Button 1 pressed");
+  });
+
+$("#button2")
+  .button()
+  .click(function(e) {
+    alert("Button 2 pressed");
+  });
